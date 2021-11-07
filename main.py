@@ -28,6 +28,12 @@ def main():
     print("message: ")
     body = "\n".join(iter(input, "exit"))
 
+    #署名の追加
+    signature = "\n\n" + "---------------------------------" + "\n" + "関西学院大学 理工学部 情報科学科 3年" + "\n" \
+                + "河村 宇記（Hiroki Kawamura）" + "\n" + "Tel: 070-5662-5782" + "\n" + "Mail: hecunyuji5@gmail.com" \
+                + "\n" + "---------------------------------"
+    body += signature
+
     #メール作成
     msg = create_message(to, subject, body, gmail_account)
 
