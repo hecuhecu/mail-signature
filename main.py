@@ -6,7 +6,7 @@ def create_message(to, sub, body, sender):
     msg = MIMEText(body)
     msg["To"] = to
     msg["Subject"] = sub
-    msg["From"] = sender
+    msg["From"] = "Hiroki Kawamura <" + sender + ">"
 
     return msg
 
