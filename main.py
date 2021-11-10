@@ -6,14 +6,12 @@ def create_message(to, sub, body, sender):
     msg = MIMEText(body)
     msg["To"] = to
     msg["Subject"] = sub
-    msg["From"] = "Hiroki Kawamura <" + sender + ">"
+    msg["From"] = "送信者名"
 
     return msg
 
 def add_signature(body):
-    signature = "\n\n" + "---------------------------------" + "\n" + "関西学院大学 理工学部 情報科学科 3年" + "\n" \
-                + "河村 宇記（Hiroki Kawamura）" + "\n" + "Tel: 070-5662-5782" + "\n" + "Mail: hecunyuji5@gmail.com" \
-                + "\n" + "---------------------------------"
+    signature = "署名"
     body += signature
 
     return body
@@ -27,8 +25,8 @@ def send_message(msg, id, pw):
 
 def main():
     #gmailログイン用のデータ
-    gmail_account = "hecunyuji5@gmail.com"
-    gmail_password = "kawamura0628"
+    gmail_account = "************"
+    gmail_password = "************"
 
     #宛先,件名,本文(exitで終了)を入力
     to = input("to: ")
